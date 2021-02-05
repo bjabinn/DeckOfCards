@@ -8,7 +8,7 @@ public class App
         Deck deck = new Deck();
         deck.print();
         System.out.println("-------------");
-        
+
         deck.shuffle();
         deck.print();
     }

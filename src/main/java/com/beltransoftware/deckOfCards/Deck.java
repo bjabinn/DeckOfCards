@@ -18,12 +18,12 @@ public class Deck {
     public Deck() {
          create();
     }
-    
+
 	//Public methods
     public void shuffle() {
     	int numberOfSuits = Card.Suits.values().length;
     	int numberOfCardsBySuit= Card.Ranks.length-1;
-    	
+
     	for (int i = 0; i <  numberOfSuits * numberOfCardsBySuit; i++) {
     		int newPosition = R.nextInt(numberOfSuits * numberOfCardsBySuit);
     		Card cardToSwap = cards.get(i);
@@ -31,7 +31,7 @@ public class Deck {
     		cards.set(newPosition, cardToSwap);
     	}
     }
-    
+
     public Card dealOneCard() {
     	if (cards.isEmpty()) {
     		return null;
@@ -40,12 +40,12 @@ public class Deck {
     	cards.remove(1);
     	return cardToReturn;
     }
-    
+
     public void print() {
     	Consumer<? super Card> lambdaExpression = x -> System.out.println(x.toString());	    	 
         cards.forEach(lambdaExpression);
     }
-    
+
     //Private methods
     private void create() {
     	for (Card.Suits suit : Card.Suits.values()) {
@@ -55,6 +55,4 @@ public class Deck {
         	}            
         } 
     }
-    
-
 }
