@@ -35,5 +35,17 @@ public class Card {
         return Ranks[this.value] + " of " + this.suit;
     }
 	
+	public int getValue() {
+		return this.value;
+	}
+	
+	public String getRank() {
+		return Ranks[this.value];
+	}
+	
+	public Suits getSuit() {
+		return this.suit;
+	}
+	
     //Private methods
 }

@@ -1,5 +1,6 @@
 package com.beltransoftware.deckOfCards;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -14,14 +15,16 @@ public class CardTest
     /**
      * Once a card is create, all values (suit, value and rank) are successfully right
      */
-    @Test
+	@Test
     public void when1CardIscreated_thenAllValuesAreSavedProperly()
     {
         final Card card = new Card(1, Suits.CLUBS);
-        
-        
+        assertEquals(1, card.getValue());
+        assertEquals(Suits.CLUBS, card.getSuit());
+        assertEquals("Ace", card.getRank());        
     }
     
     
     
 }
+
