@@ -32,6 +32,15 @@ public class Deck {
     	}
     }
     
+    public Card dealOneCard() {
+    	if (cards.isEmpty()) {
+    		return null;
+    	}
+    	Card cardToReturn = cards.get(1);
+    	cards.remove(1);
+    	return cardToReturn;
+    }
+    
     public void print() {
     	Consumer<? super Card> lambdaExpression = x -> System.out.println(x.toString());	    	 
         cards.forEach(lambdaExpression);
