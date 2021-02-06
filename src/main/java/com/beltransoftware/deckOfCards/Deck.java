@@ -36,8 +36,8 @@ public class Deck {
     	if (cards.isEmpty()) {
     		return null;
     	}
-    	Card cardToReturn = cards.get(1);
-    	cards.remove(1);
+    	Card cardToReturn = cards.get(0);
+    	cards.remove(0);
     	return cardToReturn;
     }
 
@@ -45,6 +45,11 @@ public class Deck {
     	Consumer<? super Card> lambdaExpression = x -> System.out.println(x.toString());	    	 
         cards.forEach(lambdaExpression);
     }
+    
+    public int getNumberOfCards() {
+    	return cards.size();
+    }
+
 
     //Private methods
     private void create() {

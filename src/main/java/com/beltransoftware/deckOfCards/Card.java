@@ -25,6 +25,8 @@ public class Card {
 	}
 
 	//Constructor
+	public Card() {}
+	
 	public Card(int value, Suits suit) {
 		this.suit = suit;
 	    this.value = value;
@@ -45,6 +47,14 @@ public class Card {
 
 	public Suits getSuit() {
 		return this.suit;
+	}
+	
+	public void setValue(int value) {
+		this.value = value;
+	}
+	
+	public void setSuit(Suits suit) {
+		this.suit = suit;
 	}
 
     //Private methods

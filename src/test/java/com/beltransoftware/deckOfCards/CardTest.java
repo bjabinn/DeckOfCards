@@ -7,7 +7,7 @@ import org.junit.Test;
 import com.beltransoftware.deckOfCards.Card.Suits;
 
 /**
- * Unit tests class.
+ * Unit test for Card class.
  */
 public class CardTest
 {
