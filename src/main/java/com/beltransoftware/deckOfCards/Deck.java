@@ -14,7 +14,9 @@ public class Deck {
 
     //Enums
     
-    //Constructor
+    /**
+     * Constructor
+     */
     public Deck() {
          create();
     }
