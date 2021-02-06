@@ -19,7 +19,12 @@ public class Deck {
          create();
     }
 
-	//Public methods
+    /**
+	   * This is the main method which makes use of addNum method.
+	   * @param None
+	   * @return Nothing.
+	   * @exception Nothing
+	   */
     public void shuffle() {
     	int numberOfSuits = Card.Suits.values().length;
     	int numberOfCardsBySuit= Card.Ranks.length-1;
