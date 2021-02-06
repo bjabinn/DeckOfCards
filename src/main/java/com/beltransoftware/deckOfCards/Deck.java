@@ -56,7 +56,7 @@ public class Deck {
     }
 
 
-    //Private methods
+    //Private methods 
     private void create() {
     	for (Card.Suits suit : Card.Suits.values()) {
             for (int j=1; j < Card.Ranks.length; j++) {
