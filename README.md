@@ -54,8 +54,8 @@ $ mvn clean jacoco:prepare-agent site
 
 ## Reporting
 On /doc/site/index.html we will be able to find the:
-* Quality metrics
-* Unit test coverage
+* Quality metrics: checkstyle, CPD, PMD.
+* Unit test coverage: surefire and Jacoco
 * Javadoc documentation
 
 ## Decisions
@@ -65,6 +65,8 @@ Language: It have been implemented using:
     and because it is my main programming language. I could have done it using C#, Python or NodeJS as well. :wink:</li>
     <li><em>Maven</em>: to manage the dependencies.</li>
 </ul>
+
+* The doc folder has not been removed of the repository with the idea of facilitate your report visualition been not needed the building process. 
 
 ## Next steps
 This classes could be extended to new features and the application could be modified with this adittional ideas:
