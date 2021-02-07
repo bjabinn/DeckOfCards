@@ -13,7 +13,7 @@ public class App {
         Deck deck = new Deck();
         System.out.println("Deck as is created");
         deck.print();
-        
+
         System.out.println("---------------------------");
         System.out.println("Deck after being shuffled");
         System.out.println("---------------------------");

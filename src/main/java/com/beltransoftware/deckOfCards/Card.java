@@ -4,13 +4,13 @@ public class Card {
 	/**
 	 * Public variable to represent the number and faces
 	 */
-	public static String[] Ranks = {null, "Ace", "2", "3", "4", "5", "6", 
-			                        "7", "8", "9", "10", "Jack", "Queen", 
+	public static String[] Ranks = {null, "Ace", "2", "3", "4", "5", "6",
+			                        "7", "8", "9", "10", "Jack", "Queen",
 			                        "King"};
 
 	/**
-	 * vaule: Private variable that represent the number of the card 1-13 
-	 */	
+	 * vaule: Private variable that represent the number of the card 1-13
+	 */
 	private int value;
 
 	/**
@@ -68,7 +68,7 @@ public class Card {
 
 	/**
      * Getter of Rank attribute
-     * 
+     *
      * @return String that represent the card (Ace, 2,3, ..., King (1-12).
      */
 	public String getRank() {
@@ -83,19 +83,19 @@ public class Card {
 	public Suits getSuit() {
 		return this.suit;
 	}
-	
+
 	/**
      * Setter of Value attribute
-     * 
+     *
      * @param value  Set the value of the card
      */
 	public void setValue(int value) {
 		this.value = value;
 	}
-		
+
 	/**
      * Setter of Suit attribute
-     * 
+     *
      * @param suit  Set the suit of the card
      */
 	public void setSuit(Suits suit) {
