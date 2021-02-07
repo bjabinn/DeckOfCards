@@ -5,27 +5,24 @@ import java.util.Random;
 import java.util.function.Consumer;
 
 public class Deck {
-	//Public variables
-	
-	//Private variables
-    private ArrayList<Card> cards= new ArrayList<Card>();
-    
-    private static final Random R = new Random();
 
-    //Enums
+    /**
+     * Private variables
+     */
+    private ArrayList<Card> cards= new ArrayList<Card>();
+
+    private static final Random R = new Random();
     
     /**
-     * Constructor
+     * Constructor: create a sorted new deck by kind of suits and ranks 
      */
     public Deck() {
          create();
     }
 
     /**
-	   * This is the main method which makes use of addNum method.
-	   * @param None
-	   * @return Nothing.
-	   * @exception Nothing
+	   * This method unsorted the deck using a random sequence
+	   * 
 	   */
     public void shuffle() {
     	int numberOfSuits = Card.Suits.values().length;
@@ -39,6 +36,11 @@ public class Deck {
     	}
     }
 
+    /**
+	   * This method return null when no card remain in the deck or, in another case, the first card in the deck 
+	   * 
+	   * @return null / Card.
+	   */
     public Card dealOneCard() {
     	if (cards.isEmpty()) {
     		return null;
@@ -48,11 +50,20 @@ public class Deck {
     	return cardToReturn;
     }
 
+    /**
+	   * This method show the cards not dealt = the cards that there are still in the deck 
+	   * 
+	   */    
     public void print() {
     	Consumer<? super Card> lambdaExpression = x -> System.out.println(x.toString());	    	 
         cards.forEach(lambdaExpression);
     }
     
+    /**
+	   * This method return the number of cards still in the deck
+	   * 
+	   * @return int
+	   */     
     public int getNumberOfCards() {
     	return cards.size();
     }

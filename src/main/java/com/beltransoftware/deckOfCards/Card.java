@@ -58,6 +58,8 @@ public class Card {
 
 	/**
      * Getter of value attribute
+     * 
+     * @return Numeric value of the card (1-12).
      */
 	public int getValue() {
 		return this.value;
@@ -65,6 +67,8 @@ public class Card {
 
 	/**
      * Getter of Rank attribute
+     * 
+     * @return String that represent the card (Ace, 2,3, ..., King (1-12).
      */
 	public String getRank() {
 		return Ranks[this.value];
@@ -72,20 +76,26 @@ public class Card {
 
 	/**
      * Getter of Suit attribute
+     * 
+     * @return Return suit which the card belong
      */
 	public Suits getSuit() {
 		return this.suit;
 	}
 	
 	/**
-     * Getter of Value attribute
+     * Setter of Value attribute
+     * 
+     * @param value  Set the value of the card
      */
 	public void setValue(int value) {
 		this.value = value;
 	}
 		
 	/**
-     * Getter of Suit attribute
+     * Setter of Suit attribute
+     * 
+     * @param suit  Set the suit of the card
      */
 	public void setSuit(Suits suit) {
 		this.suit = suit;
