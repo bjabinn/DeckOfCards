@@ -50,8 +50,7 @@ public class DeckTest
      * When a new deck is created and a card is dealt(less than53), then gotten card cannot be null
      */
     @Test
-    public void givenNewDeck_whenOneCardIsDealtLess53_thenCardIsNotNull()
-    {
+    public void givenNewDeck_whenOneCardIsDealtLess53_thenCardIsNotNull() {
     	final Deck deck = new Deck();
     	Card card = deck.dealOneCard();
     	
@@ -62,16 +61,14 @@ public class DeckTest
      * When a new deck is created and a card is dealt(more than52), then gotten card cannot be null
      */
     @Test
-    public void givenNewDeck_whenOneCardIsDealtMore52_thenCardIsNotNull()
-    {
+    public void givenNewDeck_whenOneCardIsDealtMore52_thenCardIsNotNull() {
     	final Deck deck = new Deck();
     	Card card = new Card();
-    	
+	
     	for (int i=0; i<60; i++) {
     		card = deck.dealOneCard();	
     	}
     	    	
     	assertNull(card);
     } 
-
 }

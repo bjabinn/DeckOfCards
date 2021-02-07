@@ -4,8 +4,9 @@ public class Card {
 	/**
 	 * Public variable to represent the number and faces
 	 */
-	public static String[] Ranks = {null, "Ace", "2", "3", "4", "5", "6", "7",
-			                              "8", "9", "10", "Jack", "Queen", "King"};
+	public static String[] Ranks = {null, "Ace", "2", "3", "4", "5", "6", 
+			                        "7", "8", "9", "10", "Jack", "Queen", 
+			                        "King"};
 
 	/**
 	 * vaule: Private variable that represent the number of the card 1-13 
@@ -18,7 +19,7 @@ public class Card {
     private Suits suit;
 
     /**
-     * Enum Suits. It is not an object due to just represent a collection of values 
+     * Enum Suits. It is not an object due to just represent a collection of values
      */
 	public enum Suits {
 	    SPADES(1),
@@ -36,17 +37,17 @@ public class Card {
 	/**
      * Constructor
      */
-	public Card() {}
-	
+	public Card() { }
+
 	/**
      * Build a card with the value and suit given
-     * 
-     * @param value The value of the card
-     * @param suit The suit Enum
+     *
+     * @param valueC The value of the card
+     * @param suitC The suit Enum
      */
-	public Card(int value, Suits suit) {
-		this.suit = suit;
-	    this.value = value;
+	public Card(final int valueC, final Suits suitC) {
+		this.suit = suitC;
+	    this.value = valueC;
 	}
 
 	/**
@@ -58,7 +59,7 @@ public class Card {
 
 	/**
      * Getter of value attribute
-     * 
+     *
      * @return Numeric value of the card (1-12).
      */
 	public int getValue() {
@@ -76,7 +77,7 @@ public class Card {
 
 	/**
      * Getter of Suit attribute
-     * 
+     *
      * @return Return suit which the card belong
      */
 	public Suits getSuit() {

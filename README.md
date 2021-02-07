@@ -62,7 +62,7 @@ On /doc/site/index.html we will be able to find the:
 * Language: It have been implemented using:
 <ul>
     <li><em>JAVA 8</em>: to use lambdas and streams. For 2 reason: it is the most used languages used at Appian, it is wide language and supported one.
-    and because it is my main programming language. I could have done it using C#, Python or NodeJS as well.</li>
+    and because it is my main programming language. I could have done it using C#, Python or NodeJS as well. :wink:</li>
     <li><em>Maven</em>: to manage the dependencies.</li>
     <li><em>Jacoco and surfire</em>: to get the test coverage.</li>
 </ul>
