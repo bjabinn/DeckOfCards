@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-    <img src="images/cards.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/bjabinn/DeckOfCards/blob/main/images/cards.jpg" alt="Logo" width="180">
 <h3 align="center">Decf of Cards Problem Statement</h3>
 
  <!-- TABLE OF CONTENTS -->
@@ -16,11 +16,12 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li>[Installation](#installation) </li>
+        <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#reporting">Reporing</a></li>
     <li><a href="#decisions">Decisions</a></li>
+    <li><a href="#Next steps">Next steps</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -57,21 +58,22 @@ On /doc/site/index.html we will be able to find the:
 * Unit test coverage
 * Javadoc documentation
 
-## Decision
+## Decisions
 * Language: It have been implemented using:
 <ul>
-    <li><em>JAVA 8</em>: to use lambdas and streams. For 2 reason: it is the most used languages used at Appian, it is wide language and supported one
+    <li><em>JAVA 8</em>: to use lambdas and streams. For 2 reason: it is the most used languages used at Appian, it is wide language and supported one.
     and because it is my main programming language. I could have done it using C#, Python or NodeJS as well.</li>
     <li><em>Maven</em>: to manage the dependencies.</li>
     <li><em>Jacoco and surfire</em>: to get the test coverage.</li>
 </ul>
 
 ## Next steps
-* API: this functional operations might be exposed as a microservices.
-
-* Load test: just for testing purpose, besides the unit tests another kind of test might be implemented using artillery, k6 or similar.
-
-* CI / CD: this code might be included inside a continuos integration workflow. For example: build and update after a pull/merge request has been done.
+This classes could be extended to new features and the application could be modified with this adittional ideas:
+<ul>
+    <li><em>API</em>: this functional operations might be exposed as a microservices.</li>
+    <li><em>Load test</em>: just for testing purpose, besides the unit tests another kind of test might be implemented using artillery, k6 or similar.</li>
+    <li><em>CI / CD</em>: this code might be included inside a continuos integration workflow. For example: build and update after a pull/merge request has been done.</li>
+</ul>
 
 ## Contact
 Jose Ant. Beltrán
