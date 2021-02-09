@@ -7,7 +7,7 @@ public class Card {
     /**
     * Public variable to represent the number and faces.
     */
-    public static String[] ranks = {null, "Ace", "2", "3", "4", "5", "6",
+    private static String[] ranks = {null, "Ace", "2", "3", "4", "5", "6",
                                     "7", "8", "9", "10", "Jack", "Queen",
                                     "King"};
 
@@ -75,6 +75,14 @@ public class Card {
     */
     public String getRank() {
         return ranks[this.value];
+    }
+
+    /**
+    *
+    * @return Number of different ranks in the deck
+    */
+    public static int getNumberRanks() {
+        return ranks.length;
     }
 
     /**

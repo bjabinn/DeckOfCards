@@ -29,7 +29,7 @@ public class Deck {
     */
     public void shuffle() {
         int numberOfSuits = Card.Suits.values().length;
-    	int numberOfCardsBySuit = Card.ranks.length - 1;
+        int numberOfCardsBySuit = Card.getNumberRanks() - 1;
 
     	for (int i = 0; i <  numberOfSuits * numberOfCardsBySuit; i++) {
     		int newPosition = R.nextInt(numberOfSuits
@@ -72,11 +72,10 @@ public class Deck {
     	return cards.size();
     }
 
-
     //Private methods
     private void create() {
     	for (Card.Suits suit : Card.Suits.values()) {
-            for (int j = 1; j < Card.ranks.length; j++) {
+            for (int j = 1; j < Card.getNumberRanks(); j++) {
         		Card card = new Card(j, suit);
 	            this.cards.add(card);
         	}
