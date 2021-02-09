@@ -27,7 +27,7 @@ public class DeckTest
 	
 	@Test
 	public void givenNewDeck_whenShuffle_thenNotDuplicatedCards() {
-    	int numberOfCards = Card.Suits.values().length * (Card.Ranks.length-1);
+    	int numberOfCards = Card.Suits.values().length * (Card.ranks.length-1);
     	
 		final Deck deck = new Deck();
 		deck.shuffle();

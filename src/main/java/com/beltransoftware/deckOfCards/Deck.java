@@ -7,38 +7,41 @@ import java.util.function.Consumer;
 public class Deck {
 
     /**
-    * Private variables
+    * Represent real deck of cards.
     */
     private ArrayList<Card> cards = new ArrayList<Card>();
 
+    /**
+    * Used to get the random number when shuffle.
+    */
     private static final Random R = new Random();
 
     /**
-    * Constructor: create a sorted new deck by kind of suits and ranks
+    * Constructor: create a sorted new deck by kind of suits and ranks.
     */
     public Deck() {
          create();
     }
 
     /**
-	* This method unsorted the deck using a random sequence
-	*
-	*/
+    * This method unsorted the deck using a random sequence.
+    *
+    */
     public void shuffle() {
-    	int numberOfSuits = Card.Suits.values().length;
-    	int numberOfCardsBySuit = Card.Ranks.length - 1;
+        int numberOfSuits = Card.Suits.values().length;
+    	int numberOfCardsBySuit = Card.ranks.length - 1;
 
     	for (int i = 0; i <  numberOfSuits * numberOfCardsBySuit; i++) {
-    		int newPosition = R.nextInt(numberOfSuits * numberOfCardsBySuit);
+    		int newPosition = R.nextInt(numberOfSuits
+                                  * numberOfCardsBySuit);
     		Card cardToSwap = cards.get(i);
-    		cards.set(i,cards.get(newPosition));
+    		cards.set(i, cards.get(newPosition));
     		cards.set(newPosition, cardToSwap);
     	}
     }
 
     /**
-	* This method return null when no card remain in the deck or, in another case, 
-	* the first card in the deck
+	* It returns null / card depending remaining cards in the deck.
 	*
 	* @return null / Card.
 	*/
@@ -52,16 +55,16 @@ public class Deck {
     }
 
     /**
-	* This method show the cards not dealt = the cards that there are still in the deck
+	* It shows cards not dealt = the cards still in the deck.
 	*
-	*/   
+	*/
     public void print() {
-    	Consumer<? super Card> lambdaExpression = x -> System.out.println(x.toString());    	 
+    	Consumer<? super Card> lambdaExpression = x -> System.out.println(x.toString());
         cards.forEach(lambdaExpression);
     }
-    
+
     /**
-	* This method return the number of cards still in the deck
+	* This method return the number of cards still in the deck.
 	*
 	* @return int
 	*/
@@ -70,11 +73,11 @@ public class Deck {
     }
 
 
-    //Private methods 
+    //Private methods
     private void create() {
     	for (Card.Suits suit : Card.Suits.values()) {
-            for (int j = 1; j < Card.Ranks.length; j++) {
-        		Card card = new Card(j, suit);   		
+            for (int j = 1; j < Card.ranks.length; j++) {
+        		Card card = new Card(j, suit);
 	            this.cards.add(card);
         	}
         }
