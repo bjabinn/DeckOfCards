@@ -7,23 +7,23 @@ import java.util.function.Consumer;
 public class Deck {
 
     /**
-     * Private variables
-     */
+    * Private variables
+    */
     private ArrayList<Card> cards = new ArrayList<Card>();
 
     private static final Random R = new Random();
 
     /**
-     * Constructor: create a sorted new deck by kind of suits and ranks
-     */
+    * Constructor: create a sorted new deck by kind of suits and ranks
+    */
     public Deck() {
          create();
     }
 
     /**
-	   * This method unsorted the deck using a random sequence
-	   *
-	   */
+	* This method unsorted the deck using a random sequence
+	*
+	*/
     public void shuffle() {
     	int numberOfSuits = Card.Suits.values().length;
     	int numberOfCardsBySuit = Card.Ranks.length - 1;
@@ -37,11 +37,11 @@ public class Deck {
     }
 
     /**
-	   * This method return null when no card remain in the deck or, in another case, 
-	   * the first card in the deck
-	   *
-	   * @return null / Card.
-	   */
+	* This method return null when no card remain in the deck or, in another case, 
+	* the first card in the deck
+	*
+	* @return null / Card.
+	*/
     public Card dealOneCard() {
     	if (cards.isEmpty()) {
     		return null;
@@ -52,19 +52,19 @@ public class Deck {
     }
 
     /**
-	   * This method show the cards not dealt = the cards that there are still in the deck
-	   *
-	   */   
+	* This method show the cards not dealt = the cards that there are still in the deck
+	*
+	*/   
     public void print() {
     	Consumer<? super Card> lambdaExpression = x -> System.out.println(x.toString());    	 
         cards.forEach(lambdaExpression);
     }
     
     /**
-	   * This method return the number of cards still in the deck
-	   *
-	   * @return int
-	   */
+	* This method return the number of cards still in the deck
+	*
+	* @return int
+	*/
     public int getNumberOfCards() {
     	return cards.size();
     }
